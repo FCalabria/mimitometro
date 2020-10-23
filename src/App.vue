@@ -1,27 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <h1>Mimitómetro</h1>
+  <HugeForm 
+    v-model:totalKm="totalKm"
+    v-model:borders="borders"
+    v-model:camper="camper"
+    v-model:dangerousKm="dangerousKm"
+    v-model:jamKm="jamKm"
+    v-model:nightKm="nightKm"
+  />
+  <Result :cuddles="cuddles"/>
+  <Equivalencies />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
+import HugeForm from './components/HugeForm.vue'
+import Result from './components/Result.vue'
+import Equivalencies from './components/Equivalencies.vue'
 
-@Options({
+const initialData = {
+  totalKm: 0,
+  nightKm: 0,
+  dangerousKm: 0,
+  jamKm: 0,
+  borders: 0,
+  camper: false,
+}
+
+export default defineComponent({
+  name: 'App',
   components: {
-    HelloWorld
+    HugeForm,
+    Result,
+    Equivalencies,
+  },
+  data() { return initialData },
+  computed: {
+    cuddles () {
+      const baseCuddles = this.totalKm / 10 || 0
+      const nightCuddles = this.nightKm / 10 || 0
+      const dangerCuddles = this.dangerousKm / 10 || 0
+      const borderCuddles = this.borders * 15 || 0
+      const jamCuddles = this.jamKm || 0
+      const totalCuddles = baseCuddles + nightCuddles + dangerCuddles + borderCuddles + jamCuddles
+      return this.camper ? 2 * totalCuddles : totalCuddles
+    }
   }
 })
-export default class App extends Vue {}
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
