@@ -8,31 +8,31 @@
     </thead>
     <tbody>
       <tr>
-        <td>Caricia genérica</td>
+        <td>Caricia genérica 👋🏼</td>
         <td>1</td>
       </tr>
       <tr>
-        <td>Acariciar pelito</td>
+        <td>Acariciar pelito 💆🏽‍♀️</td>
         <td>1</td>
       </tr>
       <tr>
-        <td>Beso</td>
+        <td>Beso 💋</td>
         <td>2</td>
       </tr>
       <tr>
-        <td>Masaje</td>
+        <td>Masaje 👐🏼</td>
         <td>30</td>
       </tr>
       <tr>
-        <td>Achuchón</td>
+        <td>Achuchón 👩‍❤️‍👩</td>
         <td>2</td>
       </tr>
       <tr>
-        <td>Mordisco en la oreja</td>
+        <td>Mordisco en la oreja 👂🏼</td>
         <td>50</td>
       </tr>
       <tr>
-        <td>Amenaza de mordisco (cada 24h)</td>
+        <td>Amenaza de mordisco (cada 24h) 🐺</td>
         <td>50</td>
       </tr>
     </tbody>

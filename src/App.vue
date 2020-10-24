@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-xl text-orange-900 text-center mb-4 font-semibold">Mimitómetro</h1>
+  <h1 class="text-xl text-orange-900 text-center mb-4 font-semibold">🧡 Mimitómetro 🧡</h1>
   <div class="grid grid-cols-3 max-w-lg md:max-w-4xl m-auto">
     <HugeForm 
       v-model:totalKm="totalKm"
