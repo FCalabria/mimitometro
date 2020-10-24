@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @reset="onResetForm">
     <div>
       <input type="number" name="totalKm" id="totalKm" min="0" step="50" :value="totalKm" @input="onInputNumber"/>
       <label for="totalKm">Km totales 🚗</label>
@@ -20,10 +20,11 @@
       <input type="number" name="borders" id="borders" min="0" :value="borders" @input="onInputNumber"/>
       <label for="borders">Fronteras 🛂</label>
     </div>
-    <div>
+    <div class="mb-3">
       <input type="checkbox" name="camper" id="camper" :value="camper" @change="$emit('update:camper', $event.target.checked)" class="w-5 h-5"/>
       <label for="camper" class="ml-2">Camper 🚐</label>
     </div>
+    <button type="reset" class="bg-orange-600 text-white px-3 py-1 font-bold rounded border-2 border-orange-800 hover:border-orange-900 hover:bg-orange-500 focus:border-orange-900 focus:bg-orange-500">Borrar</button>
   </form>
 </template>
 
@@ -44,6 +45,15 @@ export default defineComponent({
       const target = event.target as HTMLInputElement
       this.$emit(`update:${target.name}`, target.valueAsNumber)
     },
+    onResetForm (event: Event) {
+      const form = event.target as HTMLFormElement
+      for (let i = 0; i < form.length; i++) {
+        const element = form[i] as HTMLFormElement;
+        if (element.tagName === 'INPUT') {
+          this.$emit(`update:${element.name}`, element.type === 'checkbox' ? false : 0)
+        }
+      }
+    }
   }
 })
 
