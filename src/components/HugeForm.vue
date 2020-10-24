@@ -48,13 +48,13 @@ export default defineComponent({
     onResetForm (event: Event) {
       const form = event.target as HTMLFormElement
       for (let i = 0; i < form.length; i++) {
-        const element = form[i] as HTMLFormElement;
+        const element = form[i] as HTMLFormElement
         if (element.tagName === 'INPUT') {
           this.$emit(`update:${element.name}`, element.type === 'checkbox' ? false : 0)
         }
       }
-    }
-  }
+    },
+  },
 })
 
 </script>

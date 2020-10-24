@@ -18,13 +18,13 @@ module.exports = {
           700: '#d40017',
           800: '#c00003',
           900: '#ac0000',
-        }
+        },
       },
       outline: {
-        orange: '2px solid #975A16'
-      }
-    }
+        orange: '2px solid #975A16',
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 }

@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-xl text-orange-900 text-center mb-4 font-semibold"><span class="beat">🧡</span> Mimitómetro <span class="beat">🧡</span></h1>
   <div class="grid grid-cols-3 max-w-lg md:max-w-4xl m-auto">
-    <HugeForm 
+    <HugeForm
       v-model:totalKm="totalKm"
       v-model:borders="borders"
       v-model:camper="camper"
@@ -37,7 +37,7 @@ export default defineComponent({
     Result,
     Equivalencies,
   },
-  data() { return initialData },
+  data () { return initialData },
   computed: {
     cuddles () {
       const baseCuddles = (this as any).totalKm / 10 || 0
@@ -47,8 +47,8 @@ export default defineComponent({
       const jamCuddles = (this as any).jamKm || 0
       const totalCuddles = baseCuddles + nightCuddles + dangerCuddles + borderCuddles + jamCuddles
       return (this as any).camper ? 2 * totalCuddles : totalCuddles
-    }
-  }
+    },
+  },
 })
 
 </script>
