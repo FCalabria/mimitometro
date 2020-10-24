@@ -2,7 +2,7 @@
   <table>
     <thead>
       <tr>
-        <th>Mimo</th>
+        <th class="text-left">Mimo</th>
         <th>Valor</th>
       </tr>
     </thead>
@@ -45,3 +45,15 @@ export default defineComponent({
   name: "Equivalencies",
 });
 </script>
+
+<style scoped>
+td, th {
+  @apply p-1;
+}
+td:nth-child(2) {
+  @apply text-right;
+}
+tbody tr:nth-child(odd) {
+  @apply bg-gray-400;
+}
+</style>

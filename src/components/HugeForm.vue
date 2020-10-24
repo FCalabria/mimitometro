@@ -21,8 +21,8 @@
       <label for="borders">Fronteras</label>
     </div>
     <div>
-      <input type="checkbox" name="camper" id="camper" :value="camper" @change="$emit('update:camper', $event.target.checked)"/>
-      <label for="camper">Camper</label>
+      <input type="checkbox" name="camper" id="camper" :value="camper" @change="$emit('update:camper', $event.target.checked)" class="w-5 h-5"/>
+      <label for="camper" class="ml-2">Camper</label>
     </div>
   </form>
 </template>
@@ -50,5 +50,21 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
+form>div:not(:last-of-type) {
+  @apply mb-3 flex flex-col-reverse;
+}
+input {
+  @apply bg-gray-200 p-1 border-b-2 border-teal-200 outline-none;
+}
+input:focus-visible {
+  @apply outline-orange;
+}
+@screen md {
+  form>div:not(:last-of-type) {
+    @apply flex-row;
+  }
+  label {
+    @apply ml-2 self-center;
+  }
+}
 </style>

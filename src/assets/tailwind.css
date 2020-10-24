@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+    @apply bg-gradient-to-b from-gray-300 to-teal-100 via-gray-300 h-screen px-6 py-8 text-gray-900;
+}
