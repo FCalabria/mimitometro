@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-xl text-orange-900 text-center mb-4 font-semibold">🧡 Mimitómetro 🧡</h1>
+  <h1 class="text-xl text-orange-900 text-center mb-4 font-semibold"><span class="beat">🧡</span> Mimitómetro <span class="beat">🧡</span></h1>
   <div class="grid grid-cols-3 max-w-lg md:max-w-4xl m-auto">
     <HugeForm 
       v-model:totalKm="totalKm"
@@ -52,3 +52,22 @@ export default defineComponent({
 })
 
 </script>
+<style scoped>
+@media screen and (prefers-reduced-motion: no-preference) {
+  .beat {
+    animation: beat 1s infinite;
+    display: inline-block;
+  }
+}
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
