@@ -20,12 +20,16 @@
         <td>2</td>
       </tr>
       <tr>
+        <td>Achuchón 👩‍❤️‍👩</td>
+        <td>2</td>
+      </tr>
+      <tr>
         <td>Masaje 👐🏼</td>
         <td>30</td>
       </tr>
       <tr>
-        <td>Achuchón 👩‍❤️‍👩</td>
-        <td>2</td>
+        <td>Calentar las manos en la espalda 🥶</td>
+        <td>20</td>
       </tr>
       <tr>
         <td>Mordisco en la oreja 👂🏼</td>
