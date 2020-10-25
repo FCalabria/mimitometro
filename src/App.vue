@@ -39,14 +39,14 @@ export default defineComponent({
   },
   data () { return initialData },
   computed: {
-    cuddles () {
-      const baseCuddles = (this as any).totalKm / 10 || 0
-      const nightCuddles = (this as any).nightKm / 10 || 0
-      const dangerCuddles = (this as any).dangerousKm / 10 || 0
-      const borderCuddles = (this as any).borders * 15 || 0
-      const jamCuddles = (this as any).jamKm || 0
+    cuddles (): number {
+      const baseCuddles = this.totalKm / 10 || 0
+      const nightCuddles = this.nightKm / 10 || 0
+      const dangerCuddles = this.dangerousKm / 10 || 0
+      const borderCuddles = this.borders * 15 || 0
+      const jamCuddles = this.jamKm || 0
       const totalCuddles = baseCuddles + nightCuddles + dangerCuddles + borderCuddles + jamCuddles
-      return (this as any).camper ? 2 * totalCuddles : totalCuddles
+      return this.camper ? 2 * totalCuddles : totalCuddles
     },
   },
 })
